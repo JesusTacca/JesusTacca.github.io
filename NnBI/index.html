@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>Listado de Novelas</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #121212;
+  color: #e0e0e0;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  max-width: 500px;
+  margin: auto;
+}
+
+li {
+  background: #1e1e1e;
+  border: 1px solid #2a2a2a;
+  margin-bottom: 12px;
+  border-radius: 6px;
+}
+
+a {
+  display: block;
+  padding: 15px;
+  color: #e0e0e0;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  background: #2a2a2a;
+}
+</style>
+</head>
+
+<body>
+
+<h1>📚 Novelas</h1>
+
+<ul id="lista-novelas"></ul>
+
+<script>
+const novelas = [
+  {name:'Nageki no Bourei wa Intai Shitai - Volumen 3', href: 'vol3/'},
+  {name:'Nageki no Bourei wa Intai Shitai - Volumen 4', href: 'vol4/'},
+  {name:'Nageki no Bourei wa Intai Shitai - Volumen 5', href: 'vol5/'},
+  {name:'Nageki no Bourei wa Intai Shitai - Volumen 6', href: 'vol6/'},
+  {name:'Nageki no Bourei wa Intai Shitai - Volumen 7', href: 'vol7/'},
+];
+
+const ul = document.getElementById('lista-novelas');
+
+novelas.forEach((nombre, index) => {
+  const li = document.createElement('li');
+  const a = document.createElement('a');
+
+  a.textContent = nombre.name;
+  a.href = nombre.href;
+
+  li.appendChild(a);
+  ul.appendChild(li);
+});
+</script>
+
+</body>
+</html>
