@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Listado de Novelas</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #121212;
+  color: #e0e0e0;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  max-width: 500px;
+  margin: auto;
+}
+
+li {
+  background: #1e1e1e;
+  border: 1px solid #2a2a2a;
+  margin-bottom: 12px;
+  border-radius: 6px;
+}
+
+a {
+  display: block;
+  padding: 15px;
+  color: #e0e0e0;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  background: #2a2a2a;
+}
+</style>
+</head>
+
+<body>
+
+<h1>📚 Novelas</h1>
+
+<ul id="lista-novelas"></ul>
+
+<script>
+const novelas = [  { name: 'Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e - Volumen 0', href: 'vol1/' },
+  { name: 'Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e - Volumen 1', href: 'vol2/' },
+  { name: 'Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e - Volumen 2', href: 'vol3/' },
+  { name: 'Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e - Volumen 3', href: 'vol4/' },
+  { name: 'Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e - Volumen 4', href: 'vol5/' },
+  { name: 'Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e - Volumen 4.5', href: 'vol6/' },
+  { name: 'Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e - Volumen 5', href: 'vol7/' },
+  { name: 'Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e - Volumen 6', href: 'vol8/' },
+  { name: 'Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e - Volumen 7', href: 'vol9/' },
+  { name: 'Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e - Volumen 7.5', href: 'vol10/' },
+  { name: 'Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e - Volumen 8', href: 'vol11/' },
+  { name: 'Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e - Volumen 9', href: 'vol12/' },
+  { name: 'Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e - Volumen 10', href: 'vol13/' },
+  { name: 'Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e - Volumen 11', href: 'vol14/' },
+  { name: 'Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e - Volumen 11.5', href: 'vol15/' },
+  { name: 'Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e - Segundo Año Volumen 1', href: 'vol16/' },
+  { name: 'Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e - Segundo Año Volumen 2', href: 'vol17/' },
+  { name: 'Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e - Segundo Año Volumen 3', href: 'vol18/' },
+  { name: 'Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e - Segundo Año Volumen 4', href: 'vol19/' },
+  { name: 'Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e - Segundo Año Volumen 4.5', href: 'vol20/' },
+  { name: 'Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e - Segundo Año Volumen 5', href: 'vol21/' },
+  { name: 'Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e - Segundo Año Volumen 6', href: 'vol22/' },
+  { name: 'Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e - Segundo Año Volumen 7', href: 'vol23/' },
+  { name: 'Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e - Segundo Año Volumen 8', href: 'vol24/' },
+  { name: 'Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e - Segundo Año Volumen 9', href: 'vol25/' },
+  { name: 'Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e - Segundo Año Volumen 9.5', href: 'vol26/' },
+  { name: 'Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e - Segundo Año Volumen 10', href: 'vol27/' },
+  { name: 'Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e - Segundo Año Volumen 11', href: 'vol28/' },
+];
+
+const ul = document.getElementById('lista-novelas');
+
+novelas.forEach((nombre, index) => {
+  const li = document.createElement('li');
+  const a = document.createElement('a');
+
+  a.textContent = nombre.name;
+  a.href = nombre.href;
+
+  li.appendChild(a);
+  ul.appendChild(li);
+});
+</script>
+
+</body>
+</html>
